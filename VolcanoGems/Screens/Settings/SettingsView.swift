@@ -50,8 +50,6 @@ Spacer()
             }.padding()
                 
         }
-        
-        
     }
 }
 

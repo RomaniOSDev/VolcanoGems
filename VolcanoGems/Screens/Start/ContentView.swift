@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack(path: $navigation.path) {
             StartView()
-                .environmentObject(navigation)
+                
                 .navigationDestination(for: AppRoute.self) { route in
                     switch route {
                     case .settings: SettingsView()
@@ -22,7 +22,7 @@ struct ContentView: View {
                     case .math: MatchView()
                     }
                 }
-        }
+        }.environmentObject(navigation)
     }
 }
 
