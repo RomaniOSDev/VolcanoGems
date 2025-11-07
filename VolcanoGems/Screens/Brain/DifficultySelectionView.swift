@@ -28,17 +28,10 @@ struct DifficultySelectionView: View {
                     Button {
                         onDifficultySelected(difficulty)
                     } label: {
-                        Text(difficulty.rawValue)
-                            .foregroundStyle(.white)
-                            .font(.system(size: 35, weight: .bold, design: .monospaced))
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 20)
-                            .background(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(Color.blue.opacity(0.7))
-                            )
+                        Image(difficulty.buttonImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                     }
-                    .padding(.horizontal, 40)
                 }
                 
                 Spacer()
@@ -47,4 +40,5 @@ struct DifficultySelectionView: View {
         }
     }
 }
+
 

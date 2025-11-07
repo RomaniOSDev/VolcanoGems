@@ -41,5 +41,25 @@ enum MemoryDifficulty: String, CaseIterable {
     func timeForLevel(_ level: Int) -> Int {
         return initialTime - (level - 1) * 5  // Уменьшается на 5 секунд каждый уровень
     }
+    var buttonImage: ImageResource {
+        switch self {
+        case .easy:
+            return .easyModeBTN
+        case .medium:
+            return .mediumModeBTN
+        case .hard:
+            return .hardModeBTN
+        }
+    }
+    var difficultyLabe: ImageResource{
+        switch self {
+        case .easy:
+            return .easyLabel
+        case .medium:
+            return .mediumLabal
+        case .hard:
+            return .hardLAbel
+        }
+    }
 }
 

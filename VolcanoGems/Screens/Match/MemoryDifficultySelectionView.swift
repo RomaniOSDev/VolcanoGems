@@ -28,21 +28,9 @@ struct MemoryDifficultySelectionView: View {
                     Button {
                         onDifficultySelected(difficulty)
                     } label: {
-                        VStack(spacing: 8) {
-                            Text(difficulty.rawValue)
-                                .foregroundStyle(.white)
-                                .font(.system(size: 35, weight: .bold, design: .monospaced))
-                            
-                            Text("\(difficulty.gridSize.rows)x\(difficulty.gridSize.columns)")
-                                .foregroundStyle(.white.opacity(0.8))
-                                .font(.system(size: 20, weight: .medium, design: .monospaced))
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 20)
-                        .background(
-                            RoundedRectangle(cornerRadius: 15)
-                                .fill(Color.blue.opacity(0.7))
-                        )
+                        Image(difficulty.buttonImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                     }
                     .padding(.horizontal, 40)
                 }
@@ -53,4 +41,5 @@ struct MemoryDifficultySelectionView: View {
         }
     }
 }
+
 

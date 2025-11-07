@@ -74,14 +74,7 @@ struct MemoryGameView: View {
                     }
                     
                     Spacer()
-                    
-                    // Timer
-                    Text("\(timeRemaining)s")
-                        .foregroundStyle(.white)
-                        .font(.system(size: 30, weight: .bold, design: .monospaced))
-                        .padding()
-                    
-                    Spacer()
+    
                     
                     // Matched pairs
                     Text("\(matchedPairs)/\(totalPairs)")
@@ -91,6 +84,7 @@ struct MemoryGameView: View {
                 }
                 .padding(.horizontal)
                 
+                Spacer()
                 // Game grid
                 let gridSize = difficulty.gridSize
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: gridSize.columns), spacing: 10) {
@@ -106,8 +100,20 @@ struct MemoryGameView: View {
                 .padding()
                 
                 Spacer()
+                // Timer
+                ZStack {
+                    Image(.backforanswer)
+                        .resizable()
+                    Text("\(timeRemaining)s")
+                        .foregroundStyle(.white)
+                        .font(.system(size: 30, weight: .bold, design: .monospaced))
+                        .padding()
+                }
+                .frame(width: 135, height: 70)
+                .cornerRadius(20)
             }
         }
+        .navigationBarBackButtonHidden()
         .onAppear {
             setupGame()
             startTimer()
@@ -210,8 +216,9 @@ struct CardView: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 12)
-                .fill(card.isMatched ? Color.green.opacity(0.3) : Color.blue.opacity(0.6))
+            Image(.backCountAnswer)
+                .resizable()
+                .cornerRadius(20)
             
             if card.isFlipped || card.isMatched {
                 Image(card.image)
@@ -219,13 +226,11 @@ struct CardView: View {
                     .aspectRatio(contentMode: .fit)
                     .padding(8)
             } else {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.white.opacity(0.3))
-                    .overlay(
+               
                         Image(systemName: "questionmark")
                             .foregroundStyle(.white.opacity(0.7))
                             .font(.system(size: 40, weight: .bold))
-                    )
+                    
             }
         }
         .aspectRatio(1, contentMode: .fit)

@@ -22,5 +22,26 @@ enum DifficultyLevel: String, CaseIterable {
             return 21...30
         }
     }
+    var buttonImage: ImageResource {
+        switch self {
+        case .easy:
+            return .easyBrainBTN
+        case .medium:
+            return .mediumBrainBTN
+        case .hard:
+            return .hardBrainBtn
+        }
+    }
+    var difficultyLabe: ImageResource{
+        switch self {
+        case .easy:
+            return .easyLabel
+        case .medium:
+            return .mediumLabal
+        case .hard:
+            return .hardLAbel
+        }
+    }
 }
+
 

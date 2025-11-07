@@ -31,33 +31,40 @@ struct QuizView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 20) {
-                // Progress bar
-                GeometryReader { geometry in
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 5)
-                            .fill(Color.gray.opacity(0.3))
-                        
-                        RoundedRectangle(cornerRadius: 5)
-                            .fill(Color.blue)
-                            .frame(width: geometry.size.width * progress)
+                HStack{
+                    //Difficulty label
+                    Image(difficulty.difficultyLabe)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 92)
+                    
+                    Spacer()
+                    // Question number
+                    ZStack {
+                        Image(.backCountAnswer)
+                            .resizable()
+                        Text("\(currentQuestionIndex + 1)/\(questions.count)")
+                            .foregroundStyle(.white)
+                            .font(.system(size: 20, weight: .semibold, design: .monospaced))
                     }
+                    .frame(width: 100, height: 60)
+                    .cornerRadius(20)
                 }
-                .frame(height: 10)
-                .padding(.horizontal)
-                
-                // Question number
-                Text("Question \(currentQuestionIndex + 1) of \(questions.count)")
-                    .foregroundStyle(.white)
-                    .font(.system(size: 20, weight: .semibold, design: .monospaced))
-                
                 Spacer()
                 
                 // Question text
-                Text(currentQuestion.question)
-                    .foregroundStyle(.white)
-                    .font(.system(size: 28, weight: .bold, design: .monospaced))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
+                ZStack {
+                    Image(.backCountAnswer)
+                        .resizable()
+                    Text(currentQuestion.question)
+                        .foregroundStyle(.white)
+                        .font(.system(size: 28, weight: .bold, design: .monospaced))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                        .minimumScaleFactor(0.5)
+                }
+                .frame(width: 330, height: 180)
+                .cornerRadius(20)
                 
                 Spacer()
                 
@@ -77,28 +84,33 @@ struct QuizView: View {
                                 }
                             }
                         } label: {
-                            HStack {
-                                Text(option)
-                                    .foregroundStyle(.white)
-                                    .font(.system(size: 22, weight: .medium, design: .monospaced))
-                                
-                                Spacer()
-                                
+                            ZStack {
+                                Image(.backforanswer)
+                                    .resizable()
                                 if let selected = selectedAnswerIndex {
                                     if selected == index {
-                                        Image(systemName: index == currentQuestion.correctAnswerIndex ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                            .foregroundStyle(index == currentQuestion.correctAnswerIndex ? .green : .red)
+                                        Image(index == currentQuestion.correctAnswerIndex ? .goodAnswer : .badAnswer)
+                                            .resizable()
                                     } else if index == currentQuestion.correctAnswerIndex {
-                                        Image(systemName: "checkmark.circle.fill")
-                                            .foregroundStyle(.green)
+                                        Image(.goodAnswer)
+                                            .resizable()
                                     }
                                 }
+                                    
+                                
+                                HStack {
+                                    Text(option)
+                                        .foregroundStyle(.white)
+                                        .font(.system(size: 22, weight: .medium, design: .monospaced))
+                                    
+                                    Spacer()
+                                    
+                                    
+                                }.padding(20)
+                                
                             }
-                            .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(backgroundColor(for: index))
-                            )
+                            .frame(width: 300, height: 80)
+                            .cornerRadius(10)
                         }
                         .disabled(selectedAnswerIndex != nil)
                         .padding(.horizontal)

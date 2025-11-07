@@ -24,23 +24,18 @@ struct QuizResultView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 30) {
-                Text("QUIZ RESULTS")
-                    .foregroundStyle(.white)
-                    .font(.system(size: 45, weight: .heavy, design: .monospaced))
-                    .multilineTextAlignment(.center)
+                Image(correctAnswers == totalQuestions ? .victoryLabel : .lossLabel)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("\(correctAnswers) / \(totalQuestions)")
+                        .foregroundStyle(.white)
+                        .font(.system(size: 25, weight: .semibold, design: .monospaced))
                 
                 Spacer()
                 
-                // Score display
-                VStack(spacing: 20) {
-                    Text("\(score)%")
-                        .foregroundStyle(.white)
-                        .font(.system(size: 80, weight: .bold, design: .monospaced))
-                    
-                    Text("\(correctAnswers) / \(totalQuestions)")
-                        .foregroundStyle(.white)
-                        .font(.system(size: 30, weight: .semibold, design: .monospaced))
-                }
+                Image(correctAnswers == totalQuestions ? .victoryCup : .loosCup)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                 
                 Spacer()
                 
@@ -49,29 +44,13 @@ struct QuizResultView: View {
                     Button {
                         onRestart()
                     } label: {
-                        Text("TRY AGAIN")
-                            .foregroundStyle(.white)
-                            .font(.system(size: 25, weight: .bold, design: .monospaced))
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 20)
-                            .background(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(Color.blue.opacity(0.7))
-                            )
+                        MainButtonView(title: "TRY AGAIN")
                     }
                     
                     Button {
                         onBackToMenu()
                     } label: {
-                        Text("BACK TO MENU")
-                            .foregroundStyle(.white)
-                            .font(.system(size: 25, weight: .bold, design: .monospaced))
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 20)
-                            .background(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(Color.gray.opacity(0.7))
-                            )
+                        MainButtonView(title: "BACK TO MENU")
                     }
                 }
                 .padding(.horizontal, 40)
@@ -83,3 +62,12 @@ struct QuizResultView: View {
     }
 }
 
+
+#Preview {
+    QuizResultView(correctAnswers: 2, totalQuestions: 2) {
+        ()
+    } onBackToMenu: {
+        ()
+    }
+
+}

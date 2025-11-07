@@ -33,12 +33,20 @@ struct LevelSelectionView: View {
                     }
                     
                     Spacer()
+                    Image(difficulty.difficultyLabe)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 90)
+                    Spacer()
+                    Image(systemName: "chevron.left")
+                        .foregroundStyle(.white)
+                        .font(.system(size: 30, weight: .bold))
+                        .padding()
+                        .opacity(0)
+                    
                 }
                 
-                Text("SELECT LEVEL")
-                    .foregroundStyle(.white)
-                    .font(.system(size: 45, weight: .heavy, design: .monospaced))
-                    .multilineTextAlignment(.center)
+                
                 
                 Spacer()
                 
@@ -51,9 +59,8 @@ struct LevelSelectionView: View {
                             }
                         } label: {
                             ZStack {
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(unlockedLevels.contains(level) ? Color.blue.opacity(0.7) : Color.gray.opacity(0.3))
-                                
+                                Image(.backCountAnswer)
+                                    .resizable()
                                 VStack {
                                     if unlockedLevels.contains(level) {
                                         Text("\(level)")
@@ -71,6 +78,7 @@ struct LevelSelectionView: View {
                                 }
                             }
                             .frame(width: 100, height: 100)
+                            .cornerRadius(20)
                         }
                         .disabled(!unlockedLevels.contains(level))
                     }
@@ -81,6 +89,7 @@ struct LevelSelectionView: View {
             }
             .padding()
         }
+        .navigationBarBackButtonHidden()
         .onAppear {
             unlockedLevels = progressManager.getUnlockedLevels(for: difficulty)
         }

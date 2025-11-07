@@ -26,9 +26,9 @@ struct MemoryResultView: View {
                 
                 Spacer()
                 
-                Image(systemName: won ? "checkmark.circle.fill" : "xmark.circle.fill")
-                    .foregroundStyle(won ? .green : .red)
-                    .font(.system(size: 100))
+                Image(won ? .victoryCup : .loosCup)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                 
                 Text(won ? "Great job!" : "Try again!")
                     .foregroundStyle(.white)
@@ -41,29 +41,15 @@ struct MemoryResultView: View {
                     Button {
                         onTryAgain()
                     } label: {
-                        Text("TRY AGAIN")
-                            .foregroundStyle(.white)
-                            .font(.system(size: 25, weight: .bold, design: .monospaced))
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 20)
-                            .background(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(Color.blue.opacity(0.7))
-                            )
+                        MainButtonView(title: "TRY AGAIN")
+                        
                     }
                     
                     Button {
                         onBackToLevels()
                     } label: {
-                        Text("BACK TO LEVELS")
-                            .foregroundStyle(.white)
-                            .font(.system(size: 25, weight: .bold, design: .monospaced))
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 20)
-                            .background(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .fill(Color.gray.opacity(0.7))
-                            )
+                        MainButtonView(title: "BACK TO LEVELS")
+
                     }
                 }
                 .padding(.horizontal, 40)
@@ -75,3 +61,11 @@ struct MemoryResultView: View {
     }
 }
 
+#Preview {
+    MemoryResultView(won: true) {
+        ()
+    } onBackToLevels: {
+        ()
+    }
+
+}
