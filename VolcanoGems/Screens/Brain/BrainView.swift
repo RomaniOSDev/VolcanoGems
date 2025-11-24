@@ -14,6 +14,7 @@ enum QuizScreen {
 }
 
 struct BrainView: View {
+    @StateObject private var statisticsManager = GameStatisticsManager.shared
     @State private var currentScreen: QuizScreen = .difficultySelection
     @State private var selectedDifficulty: DifficultyLevel?
     @State private var quizQuestions: [QuizQuestion] = []
@@ -40,6 +41,9 @@ struct BrainView: View {
                         questions: quizQuestions
                     ) { correct, total in
                         quizResults = (correct, total)
+                        // Save statistics
+                        let won = correct == total
+                        statisticsManager.recordBrainGame(won: won)
                         currentScreen = .results
                     }
                 }

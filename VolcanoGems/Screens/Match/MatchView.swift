@@ -54,6 +54,9 @@ struct MatchView: View {
                     ) { won in
                         gameResult = won
                         
+                        // Save statistics
+                        GameStatisticsManager.shared.recordMatchGame(won: won)
+                        
                         // Unlock next level if won
                         if won {
                             if level < 6 {

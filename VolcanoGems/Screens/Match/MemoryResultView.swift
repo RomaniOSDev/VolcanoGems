@@ -69,3 +69,4 @@ struct MemoryResultView: View {
     }
 
 }
+

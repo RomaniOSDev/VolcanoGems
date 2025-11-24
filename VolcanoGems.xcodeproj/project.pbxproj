@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		743AFB302ED460EB009EE5D4 /* GameStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743AFB2F2ED460EB009EE5D4 /* GameStatistics.swift */; };
 		7498340D2EC5C835006D581B /* OneSignalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749834082EC5C835006D581B /* OneSignalService.swift */; };
 		7498340E2EC5C835006D581B /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749834072EC5C835006D581B /* CheckLink.swift */; };
 		7498340F2EC5C835006D581B /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749834092EC5C835006D581B /* InternetViewController.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0C6C09A6CD21AB270261E7A2 /* Pods-VolcanoGems.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolcanoGems.release.xcconfig"; path = "Target Support Files/Pods-VolcanoGems/Pods-VolcanoGems.release.xcconfig"; sourceTree = "<group>"; };
 		611A296CA8437407E27AB3BE /* Pods-VolcanoGems.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolcanoGems.debug.xcconfig"; path = "Target Support Files/Pods-VolcanoGems/Pods-VolcanoGems.debug.xcconfig"; sourceTree = "<group>"; };
+		743AFB2F2ED460EB009EE5D4 /* GameStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatistics.swift; sourceTree = "<group>"; };
 		7453EC602EBB4750000B1423 /* VolcanoGems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolcanoGems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749834072EC5C835006D581B /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
 		749834082EC5C835006D581B /* OneSignalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalService.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				74FD09EF2EBE92B900707A9C /* MemoryProgress.swift */,
 				74FD09F02EBE92B900707A9C /* QuizQuestion.swift */,
+				743AFB2F2ED460EB009EE5D4 /* GameStatistics.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				7498340D2EC5C835006D581B /* OneSignalService.swift in Sources */,
 				7498340E2EC5C835006D581B /* CheckLink.swift in Sources */,
 				7498340F2EC5C835006D581B /* InternetViewController.swift in Sources */,
+				743AFB302ED460EB009EE5D4 /* GameStatistics.swift in Sources */,
 				749834102EC5C835006D581B /* Extensions.swift in Sources */,
 				749834112EC5C835006D581B /* LoaderViewController.swift in Sources */,
 				74FD0A1B2EBE92B900707A9C /* QuizResultView.swift in Sources */,
@@ -450,7 +454,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jor.v0lg3ms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -489,7 +493,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jor.v0lg3ms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
