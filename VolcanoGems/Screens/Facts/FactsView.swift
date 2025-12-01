@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct FactsView: View {
+    @StateObject private var achievementManager = AchievementManager.shared
     @State private var flippedCards: Set<Vulcans> = []
+    @State private var viewedVolcanoes: Set<Vulcans> = []
     
     var body: some View {
         ZStack{
@@ -30,6 +32,10 @@ struct FactsView: View {
                                 flippedCards.remove(vulcan)
                             } else {
                                 flippedCards.insert(vulcan)
+                                if !viewedVolcanoes.contains(vulcan) {
+                                    viewedVolcanoes.insert(vulcan)
+                                    achievementManager.updateVolcanoesViewed(viewedVolcanoes.count)
+                                }
                             }
                         }
                     }

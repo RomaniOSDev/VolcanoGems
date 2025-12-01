@@ -48,7 +48,22 @@ struct ModesView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }
-Spacer()
+                
+                //MARK: - Collection button
+                Button {
+                    navigationManager.navigate(to: .collection)
+                } label: {
+                    MainButtonView(title: "COLLECTION")
+                }
+                
+                //MARK: - Achievements button
+                Button {
+                    navigationManager.navigate(to: .achievements)
+                } label: {
+                    MainButtonView(title: "ACHIEVEMENTS")
+                }
+                
+                Spacer()
             }.padding()
                 
         }

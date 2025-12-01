@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		743AFB302ED460EB009EE5D4 /* GameStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743AFB2F2ED460EB009EE5D4 /* GameStatistics.swift */; };
+		740F2A832EDD85F300376232 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2A812EDD85F300376232 /* AchievementsView.swift */; };
+		740F2A862EDD85FF00376232 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2A842EDD85FF00376232 /* CollectionView.swift */; };
+		740F2A902EDD864D00376232 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2A8B2EDD864D00376232 /* Achievement.swift */; };
+		740F2A912EDD864D00376232 /* MemoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2A8D2EDD864D00376232 /* MemoryProgress.swift */; };
+		740F2A922EDD864D00376232 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2A8E2EDD864D00376232 /* QuizQuestion.swift */; };
+		740F2A932EDD864D00376232 /* VolcanoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2A8F2EDD864D00376232 /* VolcanoDetail.swift */; };
+		740F2A942EDD864D00376232 /* GameStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F2A8C2EDD864D00376232 /* GameStatistics.swift */; };
+		740F2A972EDD870900376232 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 740F2A962EDD870900376232 /* OneSignalFramework */; };
+		740F2A9A2EDD871700376232 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 740F2A992EDD871700376232 /* AppsFlyerLib */; };
 		7498340D2EC5C835006D581B /* OneSignalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749834082EC5C835006D581B /* OneSignalService.swift */; };
 		7498340E2EC5C835006D581B /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749834072EC5C835006D581B /* CheckLink.swift */; };
 		7498340F2EC5C835006D581B /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749834092EC5C835006D581B /* InternetViewController.swift */; };
 		749834102EC5C835006D581B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7498340B2EC5C835006D581B /* Extensions.swift */; };
 		749834112EC5C835006D581B /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7498340A2EC5C835006D581B /* LoaderViewController.swift */; };
-		749834142EC5C935006D581B /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 749834132EC5C935006D581B /* OneSignalFramework */; };
-		749834172EC5C944006D581B /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 749834162EC5C944006D581B /* AppsFlyerLib */; };
 		74FD0A102EBE92B900707A9C /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09E52EBE92B900707A9C /* AppRoute.swift */; };
 		74FD0A112EBE92B900707A9C /* DifficultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09E62EBE92B900707A9C /* DifficultyLevel.swift */; };
 		74FD0A122EBE92B900707A9C /* MemoryCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09E72EBE92B900707A9C /* MemoryCardType.swift */; };
@@ -22,8 +28,6 @@
 		74FD0A142EBE92B900707A9C /* Vulcans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09E92EBE92B900707A9C /* Vulcans.swift */; };
 		74FD0A152EBE92B900707A9C /* MainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09EB2EBE92B900707A9C /* MainButtonView.swift */; };
 		74FD0A162EBE92B900707A9C /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09ED2EBE92B900707A9C /* NavigationManager.swift */; };
-		74FD0A172EBE92B900707A9C /* MemoryProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09EF2EBE92B900707A9C /* MemoryProgress.swift */; };
-		74FD0A182EBE92B900707A9C /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09F02EBE92B900707A9C /* QuizQuestion.swift */; };
 		74FD0A192EBE92B900707A9C /* BrainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09F22EBE92B900707A9C /* BrainView.swift */; };
 		74FD0A1A2EBE92B900707A9C /* DifficultySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09F32EBE92B900707A9C /* DifficultySelectionView.swift */; };
 		74FD0A1B2EBE92B900707A9C /* QuizResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD09F42EBE92B900707A9C /* QuizResultView.swift */; };
@@ -48,7 +52,13 @@
 /* Begin PBXFileReference section */
 		0C6C09A6CD21AB270261E7A2 /* Pods-VolcanoGems.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolcanoGems.release.xcconfig"; path = "Target Support Files/Pods-VolcanoGems/Pods-VolcanoGems.release.xcconfig"; sourceTree = "<group>"; };
 		611A296CA8437407E27AB3BE /* Pods-VolcanoGems.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolcanoGems.debug.xcconfig"; path = "Target Support Files/Pods-VolcanoGems/Pods-VolcanoGems.debug.xcconfig"; sourceTree = "<group>"; };
-		743AFB2F2ED460EB009EE5D4 /* GameStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatistics.swift; sourceTree = "<group>"; };
+		740F2A812EDD85F300376232 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		740F2A842EDD85FF00376232 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		740F2A8B2EDD864D00376232 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		740F2A8C2EDD864D00376232 /* GameStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatistics.swift; sourceTree = "<group>"; };
+		740F2A8D2EDD864D00376232 /* MemoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryProgress.swift; sourceTree = "<group>"; };
+		740F2A8E2EDD864D00376232 /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		740F2A8F2EDD864D00376232 /* VolcanoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolcanoDetail.swift; sourceTree = "<group>"; };
 		7453EC602EBB4750000B1423 /* VolcanoGems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolcanoGems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749834072EC5C835006D581B /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
 		749834082EC5C835006D581B /* OneSignalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalService.swift; sourceTree = "<group>"; };
@@ -63,8 +73,6 @@
 		74FD09E92EBE92B900707A9C /* Vulcans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vulcans.swift; sourceTree = "<group>"; };
 		74FD09EB2EBE92B900707A9C /* MainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonView.swift; sourceTree = "<group>"; };
 		74FD09ED2EBE92B900707A9C /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
-		74FD09EF2EBE92B900707A9C /* MemoryProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryProgress.swift; sourceTree = "<group>"; };
-		74FD09F02EBE92B900707A9C /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
 		74FD09F22EBE92B900707A9C /* BrainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainView.swift; sourceTree = "<group>"; };
 		74FD09F32EBE92B900707A9C /* DifficultySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySelectionView.swift; sourceTree = "<group>"; };
 		74FD09F42EBE92B900707A9C /* QuizResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultView.swift; sourceTree = "<group>"; };
@@ -93,14 +101,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749834142EC5C935006D581B /* OneSignalFramework in Frameworks */,
-				749834172EC5C944006D581B /* AppsFlyerLib in Frameworks */,
+				740F2A972EDD870900376232 /* OneSignalFramework in Frameworks */,
+				740F2A9A2EDD871700376232 /* AppsFlyerLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		740F2A822EDD85F300376232 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				740F2A812EDD85F300376232 /* AchievementsView.swift */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		740F2A852EDD85FF00376232 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				740F2A842EDD85FF00376232 /* CollectionView.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		7453EC572EBB4750000B1423 = {
 			isa = PBXGroup;
 			children = (
@@ -162,9 +186,11 @@
 		74FD09F12EBE92B900707A9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				74FD09EF2EBE92B900707A9C /* MemoryProgress.swift */,
-				74FD09F02EBE92B900707A9C /* QuizQuestion.swift */,
-				743AFB2F2ED460EB009EE5D4 /* GameStatistics.swift */,
+				740F2A8C2EDD864D00376232 /* GameStatistics.swift */,
+				740F2A8D2EDD864D00376232 /* MemoryProgress.swift */,
+				740F2A8E2EDD864D00376232 /* QuizQuestion.swift */,
+				740F2A8B2EDD864D00376232 /* Achievement.swift */,
+				740F2A8F2EDD864D00376232 /* VolcanoDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +261,8 @@
 				74FD0A022EBE92B900707A9C /* Settings */,
 				74FD0A052EBE92B900707A9C /* Start */,
 				7498340C2EC5C835006D581B /* LoadingView */,
+				740F2A822EDD85F300376232 /* Achievements */,
+				740F2A852EDD85FF00376232 /* Collection */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -321,8 +349,8 @@
 			);
 			mainGroup = 7453EC572EBB4750000B1423;
 			packageReferences = (
-				749834122EC5C935006D581B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
-				749834152EC5C944006D581B /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+				740F2A952EDD870900376232 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+				740F2A982EDD871700376232 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
 			);
 			productRefGroup = 7453EC612EBB4750000B1423 /* Products */;
 			projectDirPath = "";
@@ -383,14 +411,18 @@
 				74FD0A142EBE92B900707A9C /* Vulcans.swift in Sources */,
 				74FD0A152EBE92B900707A9C /* MainButtonView.swift in Sources */,
 				74FD0A162EBE92B900707A9C /* NavigationManager.swift in Sources */,
-				74FD0A172EBE92B900707A9C /* MemoryProgress.swift in Sources */,
-				74FD0A182EBE92B900707A9C /* QuizQuestion.swift in Sources */,
+				740F2A832EDD85F300376232 /* AchievementsView.swift in Sources */,
+				740F2A862EDD85FF00376232 /* CollectionView.swift in Sources */,
+				740F2A902EDD864D00376232 /* Achievement.swift in Sources */,
+				740F2A912EDD864D00376232 /* MemoryProgress.swift in Sources */,
+				740F2A922EDD864D00376232 /* QuizQuestion.swift in Sources */,
+				740F2A932EDD864D00376232 /* VolcanoDetail.swift in Sources */,
+				740F2A942EDD864D00376232 /* GameStatistics.swift in Sources */,
 				74FD0A192EBE92B900707A9C /* BrainView.swift in Sources */,
 				74FD0A1A2EBE92B900707A9C /* DifficultySelectionView.swift in Sources */,
 				7498340D2EC5C835006D581B /* OneSignalService.swift in Sources */,
 				7498340E2EC5C835006D581B /* CheckLink.swift in Sources */,
 				7498340F2EC5C835006D581B /* InternetViewController.swift in Sources */,
-				743AFB302ED460EB009EE5D4 /* GameStatistics.swift in Sources */,
 				749834102EC5C835006D581B /* Extensions.swift in Sources */,
 				749834112EC5C835006D581B /* LoaderViewController.swift in Sources */,
 				74FD0A1B2EBE92B900707A9C /* QuizResultView.swift in Sources */,
@@ -454,7 +486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jor.v0lg3ms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -493,7 +525,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jor.v0lg3ms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -653,7 +685,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		749834122EC5C935006D581B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
+		740F2A952EDD870900376232 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/OneSignal/OneSignal-iOS-SDK";
 			requirement = {
@@ -661,7 +693,7 @@
 				minimumVersion = 5.2.15;
 			};
 		};
-		749834152EC5C944006D581B /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+		740F2A982EDD871700376232 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
 			requirement = {
@@ -672,14 +704,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		749834132EC5C935006D581B /* OneSignalFramework */ = {
+		740F2A962EDD870900376232 /* OneSignalFramework */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 749834122EC5C935006D581B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			package = 740F2A952EDD870900376232 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
 			productName = OneSignalFramework;
 		};
-		749834162EC5C944006D581B /* AppsFlyerLib */ = {
+		740F2A992EDD871700376232 /* AppsFlyerLib */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 749834152EC5C944006D581B /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			package = 740F2A982EDD871700376232 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
 			productName = AppsFlyerLib;
 		};
 /* End XCSwiftPackageProductDependency section */

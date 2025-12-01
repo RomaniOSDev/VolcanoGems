@@ -17,6 +17,7 @@ enum MemoryScreen {
 
 struct MatchView: View {
     @StateObject private var progressManager = MemoryProgressManager.shared
+    @StateObject private var achievementManager = AchievementManager.shared
     @State private var currentScreen: MemoryScreen = .difficultySelection
     @State private var selectedDifficulty: MemoryDifficulty?
     @State private var selectedLevel: Int?
@@ -55,7 +56,18 @@ struct MatchView: View {
                         gameResult = won
                         
                         // Save statistics
-                        GameStatisticsManager.shared.recordMatchGame(won: won)
+                        let statisticsManager = GameStatisticsManager.shared
+                        statisticsManager.recordMatchGame(won: won)
+                        
+                        // Update achievements
+                        if won {
+                            let currentWins = statisticsManager.statistics.matchWins
+                            achievementManager.updateMemoryWins(currentWins)
+                        }
+                        
+                        // Update total games achievement
+                        let totalGames = statisticsManager.statistics.brainTotalGames + statisticsManager.statistics.matchTotalGames
+                        achievementManager.updateTotalGames(totalGames)
                         
                         // Unlock next level if won
                         if won {

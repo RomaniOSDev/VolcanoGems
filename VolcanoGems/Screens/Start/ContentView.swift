@@ -20,6 +20,8 @@ struct ContentView: View {
                     case .brain: BrainView()
                     case .facts: FactsView()
                     case .math: MatchView()
+                    case .collection: CollectionView()
+                    case .achievements: AchievementsView()
                     }
                 }
         }.environmentObject(navigation)

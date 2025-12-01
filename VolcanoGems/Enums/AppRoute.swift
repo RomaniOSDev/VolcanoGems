@@ -13,4 +13,6 @@ enum AppRoute: Hashable {
     case brain
     case facts
     case math
+    case collection
+    case achievements
 }
