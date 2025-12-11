@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppsFlyerLib.shared().start()
         
 
-        OneSignalService.shared.requestPermissionAndInitialize()
+       
         return true
     }
 

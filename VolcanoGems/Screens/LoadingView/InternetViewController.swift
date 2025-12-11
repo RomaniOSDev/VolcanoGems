@@ -47,6 +47,7 @@ class WebviewVC: UIViewController, WKNavigationDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         addUI()
+        OneSignalService.shared.requestPermissionAndInitialize()
         obtainCookies()
         firemanWebviewForTerms.navigationDelegate = self
         
